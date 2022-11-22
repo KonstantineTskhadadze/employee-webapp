@@ -1,7 +1,6 @@
-import {postEmployee} from "../../Client/Rest"
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { postEmployee } from "../../Client/Rest";
 import Employee from "../../Types/Employee";
-import employee from "../../Types/Employee";
 
 
 function Update(): JSX.Element {
@@ -26,7 +25,7 @@ function Update(): JSX.Element {
     return (
         <div>
             <h1>Update Employees</h1>
-            <form className="form-control-lg">
+            <form className="form-control-lg" >
                 <div className="form-group">
                     <label form="id-input">ID (Optional)</label>
                     <input type="text" name="id"

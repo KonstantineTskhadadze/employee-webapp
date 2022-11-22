@@ -13,12 +13,8 @@ export const api = axios.create({
 });
 
 
-export const getEmployees = async (): Promise<AxiosResponse<Array<Employee>, any>> => await api.get('get');
+export const getEmployees = (): Promise<AxiosResponse<Array<Employee>, any>> => api.get('get');
 
-export const postEmployee = async (e: Employee) => await api.post('post', e)
-    .then(e => console.log(e))
-    .catch(e => console.error(e))
+export const postEmployee = (e: Employee) => api.post('post', e);
 
-export const removeEmployee = async (e: number) => await api.delete(`delete/${e}`)
-    .then(e => console.log(e))
-    .catch(e => console.log(e))
+export const removeEmployee = (e: number) => api.delete(`delete/${e}`);
